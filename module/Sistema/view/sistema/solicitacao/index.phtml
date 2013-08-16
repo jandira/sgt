@@ -1,5 +1,5 @@
 <div class="topo-table">
-    <a class="btn btn-success">Nova Solicitação</a>
+    <a class="btn btn-success" href="<?php echo $this->url('solicitacao', array('action' => 'novo'))?>">Nova Solicitação</a>
  
     <div class="btn-group">
         <button class="btn">005</button>
@@ -45,9 +45,9 @@
                     <td>Apresentar sistema</td>
                     <td>29/01/2013</td>
                     <td>
-                        <a class="btn btn-mini btn-info" href="">Visualizar</a>
-                        <a class="btn btn-mini btn-warning" href="">Editar</a>
-                        <a class="btn btn-mini btn-danger" href="">Apagar</a>
+                        <a class="btn btn-mini btn-info" href="<?php echo $this->url('solicitacao', array("action" => "detalhe", "id" => $i,)); ?>">Visualizar</a>
+                        <a class="btn btn-mini btn-warning" href="<?php echo $this->url('solicitacao', array("action" => "editar", "id" => $i,)); ?>">Editar</a>
+                        <a class="btn btn-mini btn-danger" href="<?php echo $this->url('solicitacao', array("action" => "deletar", "id" => $i,)); ?>">Apagar</a>
                     </td>
                 </tr>
             <?php endfor; ?>

@@ -1,0 +1,28 @@
+<form method="POST" action="<?php echo $this->url('solicitacao', array('action' => 'adicionar')); ?>">
+    <fieldset>
+        <legend>Nova Solicitação</legend>
+ 
+        <label><strong>Solicitante:</strong></label>
+        <input type="text" name="setor_solicitante" class="input-xlarge" placeholder="Setor Solicitante">
+ 
+        <label><strong>Destino</strong></label>
+        <input type="text" name="destino" class="input-xlarge" placeholder="Local para onde será o deslocamento">
+ 
+        <label><strong>Passageiros</strong></label>
+        <input type="text" name="passageiro" class="input-xlarge" placeholder="Nome das pessoas que serão transportadas">
+        
+        <label><strong>Objetivo</strong></label>
+        <input type="text" name="objetivo" class="input-xlarge" placeholder="Justificativa da solicitação">
+        
+        <label><strong>Data do Agendamento</strong></label>
+        <input type="text" name="data_agendamento" class="input-xlarge" placeholder="Data desejada para o deslocamento">
+        
+        <label><strong>Horário</strong></label>
+        <input type="text" name="horario_agendamento" class="input-xlarge" placeholder="Hora desejada para o deslocamento">
+ 
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="<?php echo $this->url('solicitacao'); ?>" class="btn">Voltar</a>
+        </div>
+    </fieldset>
+</form>

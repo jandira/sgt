@@ -1,0 +1,20 @@
+<form method="POST" action="<?php echo $this->url('solicitacao', array('action' => 'atualizar')); ?>">
+    <fieldset>
+        <legend>Editar Solicitação <?php echo $this->id; ?></legend>
+        <input type="hidden" name="id" value="<?php echo $this->id; ?>">
+ 
+        <label><strong>Solicitante:</strong></label>
+        <input type="text" name="solicitante" class="input-xlarge" placeholder="Setor solicitatne" value="<?php echo $this->form['solicitante']; ?>">
+ 
+        <label><strong>Destino:</strong></label>
+        <input type="text" name="destino" class="input-xlarge" placeholder="Destino do deslocamento" value="<?php echo $this->form['destino']; ?>">
+ 
+        <label>Objetivo:</label>
+        <input type="text" name="objetivo" class="input-xlarge" placeholder="Justificativa do deslocamento" value="<?php echo $this->form['objetivo']; ?>">
+ 
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Salvar Solicitação</button>
+            <a href="<?php echo $this->url('solicitacao'); ?>" class="btn">Voltar</a>
+        </div>
+    </fieldset>
+</form>
