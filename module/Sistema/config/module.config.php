@@ -11,7 +11,8 @@ return array(
     # definir controllers
     'controllers' => array(
         'invokables' => array(
-            'HomeController' => 'Sistema\Controller\HomeController'
+            'HomeController' => 'Sistema\Controller\HomeController',
+            'SolicitacaoController' => 'Sistema\Controller\SolicitacaoController',
         ),
     ),
 
@@ -28,6 +29,20 @@ return array(
                     ),
                 ),
             ),
+            'solicitacao' => array(
+                'type'      => 'segment',
+                'options'   => array(
+                    'route'    => '/solicitacao[/:action][/:id]',
+                    'constraints' => array(
+                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    'id'     => '[0-9]+',
+                ),
+                'defaults' => array(
+                    'controller' => 'SolicitacaoController',
+                    'action'     => 'index',
+                    ),
+                ),
+            )  ,
         ),
     ),
 

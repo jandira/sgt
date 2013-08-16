@@ -1,0 +1,21 @@
+<fieldset>
+    <legend>Detalhes da Solicitação <?php echo $this->id; ?></legend>
+ 
+    <dl class="dl-horizontal">
+        <dt>Nome:</dt>
+        <dd><?php echo $this->form["solicitante"]; ?></dd>
+        <dt>Telefone Principal:</dt>
+        <dd><?php echo $this->form["destino"]; ?></dd>
+        <dt>Telefone Secundario:</dt>
+        <dd><?php echo $this->form["objetivo"]; ?></dd>
+        <dt>Data Criação:</dt>
+        <dd><?php echo $this->form["data_agendamento"]; ?></dd>
+        <dt>Data Atualização:</dt>
+        <dd><?php echo $this->form["data_solicitacao"]; ?></dd>
+    </dl>
+ 
+    <div class="form-actions">
+        <a href="<?php echo $this->url('solicitacao', array('action' => 'editar', 'id' => $this->id)); ?>" class="btn btn-warning">Editar Solicitação</a>
+        <a href="<?php echo $this->url('solicitacao'); ?>" class="btn">Voltar</a>
+    </div>
+</fieldset>
